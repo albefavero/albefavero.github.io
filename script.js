@@ -377,20 +377,52 @@ randomSentenceButton.addEventListener('click', () => {
   const randomSentence = sentences[randomIndex];
   randomSentenceDisplay.innerText = randomSentence;
 
-const downloadButton = document.getElementById('downloadButton');
-downloadButton.addEventListener('click', downloadSentences);
+#const downloadButton = document.getElementById('downloadButton');
+#downloadButton.addEventListener('click', downloadSentences);
 
-function downloadSentences() {
-  const content = sentences.join('\n');  // Join sentences with line breaks
-  const blob = new Blob([content], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
+#function downloadSentences() {
+  #const content = sentences.join('\n');  // Join sentences with line breaks
+  #const blob = new Blob([content], { type: 'text/plain' });
+  #const url = URL.createObjectURL(blob);
 
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'frasi.txt';  // Set the desired file name
-  a.click();
+  #const a = document.createElement('a');
+  #a.href = url;
+  #a.download = 'frasi.txt';  // Set the desired file name
+  #a.click();
 
-  URL.revokeObjectURL(url);
+  #URL.revokeObjectURL(url);}
+  
+document.getElementById('randomSentenceButton').addEventListener('click', generateSentences);
+document.getElementById('downloadButton').addEventListener('click', generatePDF);
+
+let sentences = [];
+
+function generateSentences() {
+  sentences = [
+    'This is the first sentence.',
+    'This is the second sentence.',
+    'This is the third sentence.'
+  ];
+
+  const sentenceContainer = document.getElementById('sentenceContainer');
+  sentenceContainer.innerHTML = sentences.map(sentence => `<p>${sentence}</p>`).join('');
+}
+
+function generatePDF() {
+  const doc = new jsPDF();
+
+  // Set font and size
+  doc.setFont('Arial');
+  doc.setFontSize(12);
+
+  let y = 20; // Initial Y position for the first sentence
+  sentences.forEach(sentence => {
+    doc.text(20, y, sentence);
+    y += 10; // Adjust the Y position for the next sentence
+  });
+
+  // Save the PDF with a specific name
+  doc.save('sentences.pdf');
 }
   
 });
