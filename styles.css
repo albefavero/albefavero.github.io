@@ -1,8 +1,9 @@
 body {
-  font-family: 'Pacifico', Arial, sans-serif; /* Use Pacifico font or fallback to Arial or sans-serif */
+  font-family: 'Pacifico', Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
 }
@@ -27,7 +28,9 @@ body {
 }
 
 .download-section {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
   text-align: right;
   padding: 20px;
-  margin: 20px;
 }
