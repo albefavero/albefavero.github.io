@@ -365,7 +365,7 @@ const sentences = [
   "Akopoloniktosis = Apokolokynthosis - Giovanna",
   "Il bossolo della pistola di Claudio - Giovanna",
   "Seneca parla ai suoi coetanei - Greta",
-  "Polìptoto - Greta"
+  "Polìptoto - Greta",
   ];
   
 
