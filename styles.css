@@ -1,8 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Pacifico', Arial, sans-serif; /* Use Pacifico font or fallback to Arial or sans-serif */
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Align items to the end (bottom right) */
+  align-items: flex-end;
   height: 100vh;
   margin: 0;
 }
