@@ -1,27 +1,33 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #randomSentenceButton {
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  #randomSentenceButton:hover {
-    background-color: #2980b9;
-  }
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the end (bottom right) */
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+#randomSentenceButton {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#randomSentenceButton:hover {
+  background-color: #2980b9;
+}
+
+.download-section {
+  text-align: right;
+  padding: 20px;
+  margin: 20px;
+}
