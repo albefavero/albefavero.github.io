@@ -1,4 +1,4 @@
-import sentences from './sentence.js';
+import sentences from './script.js';
 
 const randomSentenceButton = document.getElementById('randomSentenceButton');
 const randomSentenceDisplay = document.getElementById('randomSentence');
