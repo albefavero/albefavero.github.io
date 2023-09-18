@@ -1,56 +1,37 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Align items to the right */
-  justify-content: flex-start; /* Align items to the top */
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
 }
 
 .container {
-  text-align: left; /* Align text to the left */
+  text-align: center;
   padding: 20px;
 }
 
-.tweet-container {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 300px;
-  margin-bottom: 10px;
-}
-
-.tweet-button {
+#randomSentenceButton {
   font-size: 20px;
   padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  margin-bottom: 10px;
-  background-color: #1da1f2;
-  color: white;
 }
 
-.tweet-button:hover {
-  background-color: #0d8af4;
+#randomSentenceButton:hover {
+  background-color: #2980b9;
 }
 
 .download-section {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
   text-align: right;
   padding: 20px;
-  margin: 20px;
-}
-
-.download-button {
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  background-color: #e0245e;
-  color: white;
-}
-
-.download-button:hover {
-  background-color: #c5194e;
 }
