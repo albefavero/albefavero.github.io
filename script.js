@@ -376,20 +376,17 @@ randomSentenceButton.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * sentences.length);
   const randomSentence = sentences[randomIndex];
   randomSentenceDisplay.innerText = randomSentence;
-  
-const downloadButton = document.getElementById('downloadButton');
-downloadButton.addEventListener('click', downloadSentences);
+});
 
-function downloadSentences() {
-  const content = sentences.join('\n');  // Join sentences with line breaks
+document.getElementById('downloadButton').addEventListener('click', () => {
+  const content = sentences.join('\n');
   const blob = new Blob([content], { type: 'text/plain' });
   const url = URL.createObjectURL(blob);
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'frasi.txt';  // Set the desired file name
+  a.download = 'frasi.txt';
   a.click();
 
-  URL.revokeObjectURL(url);}
-  
+  URL.revokeObjectURL(url);
 });
