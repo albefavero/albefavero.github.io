@@ -238,3 +238,24 @@ body {
   font-size: 18px;
   font-weight: 800;
 }
+
+
+
+@media (max-width: 768px) {
+  /* Hide the sidebar for smaller screens */
+  .sidebar {
+    display: none;
+  }
+
+  /* Adjust the feed width to occupy the full width */
+  .feed {
+    flex: 1;
+    min-width: 0;
+    border-right: none;
+  }
+
+  /* Hide the widgets for smaller screens */
+  .widgets {
+    display: none;
+  }
+}
