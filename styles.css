@@ -259,3 +259,50 @@ body {
     display: none;
   }
 }
+
+/* Hamburger icon styles */
+#sidebarToggle, #gadgetToggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Sidebar and gadget visibility for small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .widgets {
+    display: none;
+  }
+
+  #sidebarToggle, #gadgetToggle {
+    display: block;
+  }
+
+  .feed {
+    flex: 1;
+    min-width: 0;
+    border-right: none;
+  }
+}
+
+/* Show/hide sidebar and gadget when toggled */
+@media (max-width: 768px) {
+  #sidebarToggle.clicked {
+    display: none;
+  }
+
+  #gadgetToggle.clicked {
+    display: none;
+  }
+
+  .sidebar.active {
+    display: block;
+  }
+
+  .widgets.active {
+    display: block;
+  }
+}
