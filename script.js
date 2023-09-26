@@ -1,4 +1,8 @@
-const sentences = [
+document.addEventListener('DOMContentLoaded', () => {
+  const tweetButton = document.querySelector('.tweetBox__tweetButton');
+  const postDescription = document.getElementById('postDescription1');
+
+  const sentences = [
   "Io ho un nome brutto: Girolama - Girolama Gambino",
   "Insulto all'inter: interfeci - Michela",
   "La paura di the roberto - Michela",
@@ -368,13 +372,9 @@ const sentences = [
   "Polìptoto - Greta",
   ];
   
-
-const randomSentenceButton = document.getElementById('randomSentenceButton');
-const randomSentenceDisplay = document.getElementById('randomSentence');
-randomSentenceButton.addEventListener('click', () => {
-  const randomIndex = Math.floor(Math.random() * sentences.length);
-  const randomSentence = sentences[randomIndex];
-  randomSentenceDisplay.innerText = randomSentence;
-  
-
+  tweetButton.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * sentences.length);
+    const selectedSentence = sentences[randomIndex];
+    postDescription.innerText = selectedSentence;
+  });
 });
