@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tweetButton = document.querySelector('.tweetBox__tweetButton');
-  const postDescription = document.getElementById('postDescription1');
+  const generatedSentence = document.getElementById('generatedSentence'); // Corrected the id here
 
   const sentences = [
   "Io ho un nome brutto: Girolama - Girolama Gambino",
@@ -372,9 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
   "Polìptoto - Greta",
   ];
   
-  tweetButton.addEventListener('click', () => {
+  tweetButton.addEventListener('click', (event) => {
+    event.preventDefault();
     const randomIndex = Math.floor(Math.random() * sentences.length);
     const selectedSentence = sentences[randomIndex];
-    postDescription.innerText = selectedSentence;
+    generatedSentence.innerHTML = selectedSentence; // Set the innerHTML of the correct element
   });
 });
