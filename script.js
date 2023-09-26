@@ -369,27 +369,18 @@ const sentences = [
   ];
   
 
-const randomSentenceButton = document.getElementById('randomSentenceButton');
-const randomSentenceDisplay = document.getElementById('randomSentence');
-
-randomSentenceButton.addEventListener('click', () => {
+function generateRandomSentence() {
   const randomIndex = Math.floor(Math.random() * sentences.length);
-  const randomSentence = sentences[randomIndex];
-  randomSentenceDisplay.innerText = randomSentence;
-  
-const downloadButton = document.getElementById('downloadButton');
-downloadButton.addEventListener('click', downloadSentences);
+  return sentences[randomIndex];
+}
 
-function downloadSentences() {
-  const content = sentences.join('\n');  // Join sentences with line breaks
-  const blob = new Blob([content], { type: 'text/plain' });
-  const url = URL.createObjectURL(blob);
+function handleTweetButtonClick(event) {
+  event.preventDefault();  // Prevent the form from submitting
 
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'frasi.txt';  // Set the desired file name
-  a.click();
+  const generatedSentence = generateRandomSentence();
+  document.getElementById('generatedSentence').value = generatedSentence;
+}
 
-  URL.revokeObjectURL(url);}
-  
-});
+// Add an event listener to the "Tweet" button
+const tweetButton = document.querySelector('.tweetBox__tweetButton');
+tweetButton.addEventListener('click', handleTweetButtonClick);
