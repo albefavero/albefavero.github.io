@@ -393,3 +393,19 @@ function downloadSentences() {
   URL.revokeObjectURL(url);}
   
 });
+
+
+const sidebarToggle = document.getElementById('sidebarToggle');
+const gadgetToggle = document.getElementById('gadgetToggle');
+
+sidebarToggle.addEventListener('click', () => {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('active');
+  sidebarToggle.classList.toggle('clicked');
+});
+
+gadgetToggle.addEventListener('click', () => {
+  const gadgets = document.querySelector('.widgets');
+  gadgets.classList.toggle('active');
+  gadgetToggle.classList.toggle('clicked');
+});
