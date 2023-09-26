@@ -393,18 +393,3 @@ function downloadSentences() {
   URL.revokeObjectURL(url);}
   
 });
-
-
-const sidebarToggle = document.getElementById('sidebarToggle');
-const gadgetToggle = document.getElementById('gadgetToggle');
-
-const sidebar = document.querySelector('.sidebar');
-const gadgets = document.querySelector('.widgets');
-
-sidebarToggle.addEventListener('click', () => {
-  sidebar.classList.toggle('active');
-});
-
-gadgetToggle.addEventListener('click', () => {
-  gadgets.classList.toggle('active');
-});
