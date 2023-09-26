@@ -374,13 +374,18 @@ function generateRandomSentence() {
   return sentences[randomIndex];
 }
 
-function handleTweetButtonClick(event) {
-  event.preventDefault();  // Prevent the form from submitting
-
+function handleTweetButtonClick() {
   const generatedSentence = generateRandomSentence();
-  document.getElementById('generatedSentence').value = generatedSentence;
+  const tweetDescription = encodeURIComponent(generatedSentence);
+  const tweetURL = `https://twitter.com/intent/tweet?text=${tweetDescription}`;
+
+  // Open tweet URL in a new tab
+  window.open(tweetURL, '_blank');
+
+  // Update the post description
+  const postDescription = document.getElementById('postDescription1');
+  postDescription.innerText = generatedSentence;
 }
 
-// Add an event listener to the "Tweet" button
 const tweetButton = document.querySelector('.tweetBox__tweetButton');
 tweetButton.addEventListener('click', handleTweetButtonClick);
