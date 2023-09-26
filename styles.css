@@ -288,6 +288,22 @@ body {
   }
 }
 
+#sidebarToggle, #gadgetToggle {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+#sidebarToggle {
+  left: 10px;
+}
+
+#gadgetToggle {
+  right: 10px;
+}
+
 /* Show/hide sidebar and gadget when toggled */
 @media (max-width: 768px) {
   #sidebarToggle.clicked {
