@@ -369,23 +369,12 @@ const sentences = [
   ];
   
 
-function generateRandomSentence() {
+const randomSentenceButton = document.getElementById('randomSentenceButton');
+const randomSentenceDisplay = document.getElementById('randomSentence');
+randomSentenceButton.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * sentences.length);
-  return sentences[randomIndex];
-}
+  const randomSentence = sentences[randomIndex];
+  randomSentenceDisplay.innerText = randomSentence;
+  
 
-function handleTweetButtonClick() {
-  const generatedSentence = generateRandomSentence();
-  const tweetDescription = encodeURIComponent(generatedSentence);
-  const tweetURL = `https://twitter.com/intent/tweet?text=${tweetDescription}`;
-
-  // Open tweet URL in a new tab
-  window.open(tweetURL, '_blank');
-
-  // Update the post description
-  const postDescription = document.getElementById('postDescription1');
-  postDescription.innerText = generatedSentence;
-}
-
-const tweetButton = document.querySelector('.tweetBox__tweetButton');
-tweetButton.addEventListener('click', handleTweetButtonClick);
+});
