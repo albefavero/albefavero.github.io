@@ -398,14 +398,13 @@ function downloadSentences() {
 const sidebarToggle = document.getElementById('sidebarToggle');
 const gadgetToggle = document.getElementById('gadgetToggle');
 
+const sidebar = document.querySelector('.sidebar');
+const gadgets = document.querySelector('.widgets');
+
 sidebarToggle.addEventListener('click', () => {
-  const sidebar = document.querySelector('.sidebar');
   sidebar.classList.toggle('active');
-  sidebarToggle.classList.toggle('clicked');
 });
 
 gadgetToggle.addEventListener('click', () => {
-  const gadgets = document.querySelector('.widgets');
   gadgets.classList.toggle('active');
-  gadgetToggle.classList.toggle('clicked');
 });
