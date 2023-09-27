@@ -22,15 +22,21 @@ body {
 }
 /* feed */
 .feed {
-  max-width: 50%;
-  flex: 1;
-  min-height: 100vh; /* Ensure full viewport height is covered */
+  flex: 0.5;
   border-right: 1px solid var(--twitter-background);
-  min-width: fit-content;
   overflow-y: scroll;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
+
+@media (max-width: 750px) {
+  .feed {
+    flex: 1; /* Take up full available width below 750px */
+  }
+}
+
 .feed__header {
   position: sticky;
   top: 0;
@@ -38,6 +44,8 @@ body {
   z-index: 100;
   border: 1px solid var(--twitter-background);
   padding: 15px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .feed__header h2 {
   font-size: 20px;
@@ -90,6 +98,11 @@ body {
 .post__avatar img {
   border-radius: 50%;
   height: 40px;
+  width: 40px; /* Set the width to match the height */
+}
+
+.post__avatar .icon {
+  width: 40px; /* Match the width with the image width */
 }
 .post {
   display: flex;
