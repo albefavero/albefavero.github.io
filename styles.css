@@ -31,7 +31,7 @@ body {
   justify-content: flex-start;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1250px) {
   .feed {
     flex: 1; /* Take up full available width below 750px */
   }
