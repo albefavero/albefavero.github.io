@@ -15,18 +15,26 @@ body {
   margin-right: auto;
   padding: 0 10px;
 }
-
+.sidebar {
+  border-right: 1px solid var(--twitter-background);
+  flex: 0.2;
+  min-width: 250px;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .fa-twitter {
   color: var(--twitter-color);
   font-size: 30px;
 }
 /* feed */
 .feed {
-  flex: 1; /* Ensure it occupies at least 50% of the available space */
+  flex: 0.5; /* Ensure it occupies at least 50% of the available space */
   border-right: 1px solid var(--twitter-background);
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
+  min-width: 50%;
   align-items: center;
   justify-content: flex-start;
 }
@@ -131,12 +139,12 @@ body {
   color: gray;
 }
 .post__headerText h3 {
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 .post__headerDescription {
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .post__body {
   flex: 1;
