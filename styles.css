@@ -22,7 +22,7 @@ body {
 }
 /* feed */
 .feed {
-  flex: 0.5;
+  flex: 1; /* Ensure it occupies at least 50% of the available space */
   border-right: 1px solid var(--twitter-background);
   overflow-y: scroll;
   display: flex;
@@ -31,7 +31,7 @@ body {
   justify-content: flex-start;
 }
 
-@media (max-width: 3000px) {
+@media (max-width: 750px) {
   .feed {
     flex: 1; /* Take up full available width below 750px */
   }
