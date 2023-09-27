@@ -22,14 +22,14 @@ body {
 }
 /* feed */
 .feed {
+  max-width: 50%;
   flex: 1;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
   min-height: 100vh; /* Ensure full viewport height is covered */
   border-right: 1px solid var(--twitter-background);
   min-width: fit-content;
-  max-width: 750px;
   overflow-y: scroll;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
 }
 .feed__header {
   position: sticky;
