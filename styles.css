@@ -29,13 +29,12 @@ body {
 }
 /* feed */
 .feed {
-  flex: 0.5; /* Ensure it occupies at least 50% of the available space */
+  flex: 1; /* Ensure it occupies at least 50% of the available space */
   border-right: 1px solid var(--twitter-background);
   min-width: fit-content;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  min-width: 50%;
   align-items: center;
   justify-content: flex-start;
 }
