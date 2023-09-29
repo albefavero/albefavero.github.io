@@ -29,13 +29,10 @@ body {
 }
 /* feed */
 .feed {
-  flex: 1; /* Ensure it occupies at least 50% of the available space */
+  flex: 0.5;
   border-right: 1px solid var(--twitter-background);
   min-width: fit-content;
   overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
 }
 .feed__header {
@@ -123,7 +120,7 @@ body {
   font-size: 16px !important;
   color: var(--twitter-color);
   margin-right: 5px;
-  margin-top: 20px
+  align-self: center;
 }
 .post__headerSpecial {
   font-weight: 600;
