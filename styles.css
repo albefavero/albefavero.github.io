@@ -39,13 +39,12 @@ body {
   justify-content: flex-start;
 }
 .feed__header {
+  position: sticky;
   top: 0;
   background-color: white;
   z-index: 100;
   border: 1px solid var(--twitter-background);
   padding: 15px 20px;
-  width: 100%;
-  box-sizing: border-box;
 }
 .feed__header h2 {
   font-size: 20px;
@@ -124,6 +123,7 @@ body {
   font-size: 16px !important;
   color: var(--twitter-color);
   margin-right: 5px;
+  margin-top: 20px
 }
 .post__headerSpecial {
   font-weight: 600;
